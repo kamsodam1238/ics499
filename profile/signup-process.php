@@ -16,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Construct the SQL query
     $sql = "INSERT INTO Users.logon (Username, Pass) 
             VALUES ('$uname, $password')";
+    $sql2 = "INSERT INTO Users.Info (firstName, lastName, email, streetAddress, city) 
+            VALUES ('$uname, $password')";
 
     // Execute the SQL query
     if ($conn->query($sql) === TRUE) {
