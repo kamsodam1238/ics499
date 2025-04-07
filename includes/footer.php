@@ -6,7 +6,7 @@
         <!-- Footer page -->
         <div class="fixed-footer bg-primary text-white">
             <div class="row">
-                <div class="col">CopyRight @ Metropolitan State University</div>
+                <div class="col">Copyright @ Metropolitan State University</div>
                 <div class="col">Accessed: <span id="currentDate"></span></div>
                 <div class="col-2 text-end">Team Members:</div>
                 <div class="col-2">
