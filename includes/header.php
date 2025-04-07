@@ -27,7 +27,7 @@
                     <img src="images/icons8-test-account-color-96.png" alt="profile login" width="50" height="50">
                 </a>
                 <ul class="dropdown-menu bg-secondary">
-                    <li><a class="dropdown-item" href="#">User Login</a></li>
+                    <li><a class="dropdown-item" href="./profile/signup.html">User Login</a></li>
                     <li><a class="dropdown-item" href="#">Staff Login</a></li>
                 </ul>
             </div>
