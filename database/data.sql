@@ -60,12 +60,12 @@ BEGIN
 END;
 DELIMITER ;
 
-INSERT INTO books(title,format) VALUES
+INSERT INTO Catalogue.books(title,format) VALUES
 ('Brave New World','Softcover'),
 ('1984','Softcover'),
 ('The Art of War','Hardcover');
 
-INSERT INTO movies(title,format) VALUES
+INSERT INTO Catalogue.movies(title,format) VALUES
 ('Seven Samurai','Blu-ray'),
 ('Citizen Kane','DVD'),
 ('Madam Web','4K Blu-ray');
@@ -76,7 +76,8 @@ CREATE SCHEMA Users;
 Create Table Users.logon
 (ID int NOT NULL AUTO_INCREMENT,
 Username varchar(50),
-Pass varchar(50)
+Pass varchar(50),
+PRIMARY KEY (ID)
 );
 
 Create Table Users.Info
@@ -87,12 +88,13 @@ email varchar(50),
 streetAddress varchar(50),
 city varchar(30),
 state varchar(20),
-balance double);
+balance double,
+PRIMARY KEY (ID));
 
 Insert INTO Users.logon (Username,Pass) values
 ('Jimothee','passwords!!2'),
 ('Userneam','aspwrods');
 
-Insert INTO Users.Info (firstName, lastname, streetAddress, city, state, balance) values
-('John','doe','123 Sesame Street','New York City','New York','USA', 2.50),
-('Mary','Kate','2367 Road Street','St Pierre','South Dakota','USA', 0.00);
+Insert INTO Users.Info (firstName, lastName, streetAddress, city, state, balance) values
+('John','doe','123 Sesame Street','New York City','New York', 2.50),
+('Mary','Kate','2367 Road Street','St Pierre','South Dakota', 0.00);
