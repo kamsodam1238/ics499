@@ -1,16 +1,18 @@
 <?php
-$servername = "localhost";
-$db = "data";
-$username = "root";
-$password = "root";
+// Database connection parameters
+$host = 'localhost';        // Host name (usually localhost)
+$db   = 'user_registration';    // Name of your database
+$user = 'root';        // Your MySQL username
+$pass = 'root';    // Your MySQL password
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $db);
+try {
+    // Create a new PDO (PHP Data Object) instance to connect to the database
+    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass);
 
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+    // Set PDO to throw exceptions if any errors occur (for better error handling)
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    // If connection fails, show error and stop execution
+    die("Database connection failed: " . $e->getMessage());
 }
-echo "connection succssful";
-return $conn;
 ?>

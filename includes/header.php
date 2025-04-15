@@ -22,12 +22,12 @@
             <div class="col text-start h-auto col-4">Logo</div>
             <div class="col">Menu</div>
             <div class="col">Column</div>
-            <div class="col-1 col-fluid dropdown " data-bs-toggle="dropdown">
-                <a href="#">
+            <div class="col-1 col-fluid dropdown " >
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none " data-bs-toggle="dropdown">
                     <img src="images/icons8-test-account-color-96.png" alt="profile login" width="50" height="50">
                 </a>
                 <ul class="dropdown-menu bg-secondary">
-                    <li><a class="dropdown-item" href="./profile/signup.html">User Login</a></li>
+                <li><a class="dropdown-item" href="/profile/signup.html">User Login</a></li>
                     <li><a class="dropdown-item" href="#">Staff Login</a></li>
                 </ul>
             </div>

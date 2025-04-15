@@ -1,0 +1,17 @@
+-- Active: 1744071919634@@127.0.0.1@3306
+
+CREATE DATABASE IF NOT EXISTS user_registration;
+USE user_registration;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fname VARCHAR(50) NOT NULL,
+    lname VARCHAR(50) NOT NULL,
+    uname VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    address VARCHAR(255),
+    city VARCHAR(100),
+    state VARCHAR(10),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
