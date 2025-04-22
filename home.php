@@ -1,12 +1,13 @@
 <?php include("includes/header.php"); ?>
 
 <main class="container mt-5">
-    <h1 class="mb-4">Pages to be Created</h1>
-    <ul>
-        <li>Sign Up</li>
-        <li>Login</li>
-        <!-- Add more items as needed -->
-    </ul>
+<div class="container mt-5">
+  <form action="/search/search.php" method="GET" class="d-flex" role="search">
+    <input class="form-control me-2" type="search" name="query" placeholder="Search books..." aria-label="Search" required>
+    <button class="btn btn-outline-primary" type="submit">Search</button>
+  </form>
+</div>
+
 </main>
 
 <?php include("includes/footer.php"); ?>

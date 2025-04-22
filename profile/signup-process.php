@@ -30,6 +30,7 @@ try {
                                VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->execute([$fname, $lname, $uname, $email, $pass, $address, $city, $state]);
         echo "Registration successful!";
+        header('Location: login.php'); // redirect after login
     }
 } catch (PDOException $e) {
     // Show database errors
