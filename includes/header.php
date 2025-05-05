@@ -38,7 +38,7 @@ if (session_status() === PHP_SESSION_NONE) {
                         <li><a class="dropdown-item" href="/profile/logout.php">Logout</a></li>
                     <?php else: ?>
                         <li><a class="dropdown-item" href="/profile/login.php">User Login</a></li>
-                        <li><a class="dropdown-item" href="#">Staff Login</a></li>
+                        <li><a class="dropdown-item" href="/profile/adminlogin.php">Staff Login</a></li>
                     <?php endif; ?>
                 </ul>
             </div>

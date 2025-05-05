@@ -36,3 +36,19 @@ CREATE TABLE IF NOT EXISTS Books (
     PRIMARY KEY (ID)
 );
 
+-- Create table for admin users
+CREATE TABLE IF NOT EXISTS admin_users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,  -- Store hashed password
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert 3 admin users (sample plain-text passwords shown as placeholders)
+INSERT INTO admin_users (username, email, password) VALUES
+('samuelK', 'samk@example.com', '$2y$10$vlbFv5/tnrgdAa4SQzyP8O59ZjcsfyINoKOoqVZSpGo9sqWhFG93O'), -- password: adminpass1
+('MiguelD', 'migd@example.com', '$2y$10$/oao5PGilZM..cNCFudP5.KbXT.R/GBUgM8N/5qqeGv45kgA1fCOC'), -- password: adminpass2
+('HaoT', 'haot@example.com', '$2y$10$eMDwT0omu7KIksswY1cPN.WBNnZWh9hn2Lhm/4Iqez1cm7FGurxbC'); -- password: adminpass3
+
+ALTER TABLE users ADD COLUMN role ENUM('user', 'admin') DEFAULT 'user';

@@ -2,7 +2,7 @@
 
 <main class="container mt-5">
   <div class="container mt-5">
-    <form action="/search/search.php" method="GET" class="d-flex" role="search">
+    <form action="/search/search_result.php" method="GET" class="d-flex" role="search">
       <input class="form-control me-2" type="search" name="query" placeholder="Search books..." aria-label="Search" required>
       <button class="btn btn-outline-primary" type="submit">Search</button>
     </form>
@@ -112,6 +112,12 @@
       </button>
     </div>
   </div>
+
+  <!-- View all books -->
+  <div class="text-center mt-4">
+  <a href="../books/books.php" class="btn btn-primary btn-lg">📚 View All Books</a>
+</div>
+
 
 </main>
 
